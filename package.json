@@ -1,0 +1,24 @@
+{
+  "name": "nsgSite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://AlifeNg:Alife11.@github.com/AlifeNg/nsgSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlifeNg/nsgSite/issues"
+  },
+  "homepage": "https://github.com/AlifeNg/nsgSite#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jQuery": "^1.7.4"
+  }
+}
