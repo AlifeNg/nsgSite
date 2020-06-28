@@ -1,0 +1,238 @@
+let data = [];
+let redObj = {}
+let red = document.querySelector(".style-red")
+let red_bar = red.querySelector(".nsgtitile-bar")
+let li = red_bar.querySelectorAll("li");
+let bar_Array = [];
+li.forEach(l=>{
+    let bar_title = l.querySelector("a").innerText;
+    bar_Array.push(bar_title)
+})
+
+let topTitle = red.querySelector(".curr")
+let product_ul = red.querySelector(".nsgsplist")
+let productDom = product_ul.querySelectorAll("li")
+
+productArray = []
+productDom.forEach(li=>{
+    let product = {}
+    product.img = li.querySelector("img").src
+    product.title = li.querySelector(".czg-wqg").innerText
+    product.price = li.querySelector(".price-final").innerText
+    productArray.push(product)
+ })
+
+
+ redObj.headerText = topTitle.querySelector("a").innerText
+ redObj.updateTime = "每天10点上新"
+ redObj.barTitleArray = bar_Array
+ redObj.productArray = productArray;
+
+ data.push(redObj,pinkObj,orangeObj,greenObj,blueObj,brownObj)
+ JSON.stringify(data)
+
+ [
+    {
+      "headerText": "潮流上装",
+      "updateTime": "每天10点上新",
+      "barTitleArray": [
+        "皮衣/夹克",
+        "卫衣",
+        "衬衫",
+        "牛仔衫",
+        "棒球服",
+        "外套/风衣"
+      ],
+      "productArray": [
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/39/39_05977681498246100_240.jpg",
+          "title": "冬季胖子加厚棉衣男士加肥大码面包服韩版百搭棉袄外套个性潮男装 黑色 S",
+          "price": "￥178.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/39/39_05982346005548882_240.jpg",
+          "title": "冬季胖子棉衣男士灯芯绒加厚棉服韩版个性外套加肥大码潮男装棉袄 黄色 S",
+          "price": "￥169.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/39/39_05982349565989895_240.jpg",
+          "title": "冬季情侣连帽面包服男士帅气短款棉衣韩版休闲棉袄潮男装加厚外套 灰色 S",
+          "price": "￥189.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/39/39_05982354899298264_240.jpg",
+          "title": "冬季情侣连帽面包服男士帅气短款棉衣韩版宽松加厚棉袄潮男装外套 黑色 S",
+          "price": "￥169.00"
+        }
+      ]
+    },
+    {
+      "headerText": "精品裤装",
+      "updateTime": "每天10点上新",
+      "barTitleArray": [
+        "小脚",
+        "九分裤",
+        "休闲裤",
+        "牛仔裤",
+        "运动裤",
+        "内裤"
+      ],
+      "productArray": [
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/45/45_05960745627128595_240.jpg",
+          "title": "潮男秋冬季裤子男韩版潮流秋季加绒运动男士休闲裤宽松潮牌束脚工装裤 深灰色 M",
+          "price": "￥119.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/45/45_05960739685357586_240.jpg",
+          "title": "裤子男韩版潮流秋冬季运动裤男士加绒宽松休闲束脚长裤潮牌工装裤 黑色 M",
+          "price": "￥119.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/15/15_05599992122073239_240.jpg",
+          "title": "休闲裤男士裤子男冬季修身小脚韩版潮流秋冬款2017学生哈伦束脚裤 宝蓝 28",
+          "price": "￥125.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/18/18_05598228774481982_240.jpg",
+          "title": "2017秋季新款休闲裤男士加肥加大码束脚卫裤韩版青年小脚潮男裤子 黑色 M",
+          "price": "￥98.00"
+        }
+      ]
+    },
+    {
+      "headerText": "经典套装",
+      "updateTime": "每天10点上新",
+      "barTitleArray": [
+        "休闲套装",
+        "运动套装",
+        "西服套装",
+        "睡衣内衣"
+      ],
+      "productArray": [
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/32/32_05542521522860780_240.jpg",
+          "title": "薄款长袖卫衣长裤一套装青少年夏天外套运动衣服装男 白色 M",
+          "price": "￥128.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/32/32_05539475467236705_240.jpg",
+          "title": "青少年夏季韩版修身背心男士运动学生短袖套装男潮流无袖T恤夏装 白色 M",
+          "price": "￥89.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/18/18_05533655547367959_240.jpg",
+          "title": "夏天两件套装矮个子清爽褶皱休闲运动短袖系带5分裤 军绿 S",
+          "price": "￥128.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/25/25_05532167381257098_240.jpg",
+          "title": "夏季男士无袖运动睡衣套装休闲背心短裤纯棉夏天背心家居服大码薄 灰色 M",
+          "price": "￥129.00"
+        }
+      ]
+    },
+    {
+      "headerText": "时尚鞋靴",
+      "updateTime": "每天10点上新",
+      "barTitleArray": [
+        "板鞋",
+        "帆布鞋",
+        "豆豆鞋",
+        "懒人鞋",
+        "休闲鞋",
+        "运动鞋"
+      ],
+      "productArray": [
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/47/47_06071111289163602_240.jpg",
+          "title": "2019春季新款小白鞋男韩版板鞋男士白鞋百搭休闲鞋夏季增高男鞋子 白色 36",
+          "price": "￥89.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/47/47_06071103152844782_240.jpg",
+          "title": "2019春季透气阿甘鞋男小白鞋男士休闲帆布板鞋韩版潮流男鞋子潮鞋 白黑 36",
+          "price": "￥89.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/47/47_06071100369195301_240.jpg",
+          "title": "2019春季新款小白鞋男士板鞋男韩版潮鞋休闲鞋百搭白鞋男鞋子夏季 白色 36",
+          "price": "￥89.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/47/47_06071097359425992_240.jpg",
+          "title": "2019春季新款小白鞋男鞋子韩版夏季板鞋男士百搭白鞋帆布休闲潮鞋 白色 36",
+          "price": "￥89.00"
+        }
+      ]
+    },
+    {
+      "headerText": "精选上装",
+      "updateTime": "每天10点上新",
+      "barTitleArray": [
+        "T恤",
+        "开衫",
+        "马甲",
+        "针织衫/毛衣",
+        "防晒衣",
+        "毛呢大衣",
+        "棉衣/羽绒服"
+      ],
+      "productArray": [
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/16/16_05543981338282911_240.jpg",
+          "title": "潮男士宽松polo衫t恤oversize韩版短袖半袖五分袖 白色 M",
+          "price": "￥76.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/32/32_05537733040500746_240.jpg",
+          "title": "中国风夏季修身款简约百搭短袖翻领t恤男青年POLO衫韩版学生上衣 黑色 M",
+          "price": "￥88.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/18/18_05533670133624046_240.jpg",
+          "title": "男韩版修身翻领短袖T恤矮个子撞色polo衫 黑色 M",
+          "price": "￥105.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/32/32_05512767271098682_240.jpg",
+          "title": "新款翻领polo衫简约白色 保罗衫修身帅气时尚有型男装 黑色 M",
+          "price": "￥89.00"
+        }
+      ]
+    },
+    {
+      "headerText": "精选裤装",
+      "updateTime": "每天10点上新",
+      "barTitleArray": [
+        "五分裤",
+        "休闲裤",
+        "牛仔裤",
+        "运动裤",
+        "西裤",
+        "内裤"
+      ],
+      "productArray": [
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/16/16_05533837494926696_240.jpg",
+          "title": "夏季男款牛仔短裤薄款修身五分裤韩版时尚中裤夏天五分牛仔裤男潮 浅蓝 M",
+          "price": "￥69.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/14/14_05548284464900706_240.jpg",
+          "title": "彩色织带牛仔短裤男夏季2017潮流直筒百搭沙滩裤情侣装韩版五分裤 浅蓝色 M",
+          "price": "￥85.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/25/25_05531681651489658_240.jpg",
+          "title": "短裤男夏天2017新款韩版潮流学生5五分裤青年时尚纯棉个性沙滩裤 黑色 M",
+          "price": "￥79.00"
+        },
+        {
+          "img": "https://www.nanshig.com/data/upload/shop/store/goods/32/32_05503335029993919_240.jpg",
+          "title": "短裤男士韩版潮流夏天夏季五分四分裤男生港风休闲5分宽松半截裤 藏青 M",
+          "price": "￥75.00"
+        }
+      ]
+    }
+  ]
