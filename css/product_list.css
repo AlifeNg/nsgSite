@@ -82,11 +82,152 @@
 
 .header_sort ul li{
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .header_sort ul li a{
-    display: block;
+    font-size: 15px;
 }
 
+
+/* 商品列表 */
+.goods_list{
+    width: 100%;
+}
+
+.goods_list_content{
+    padding: 10px 0;
+    margin: 0 70px;
+    border: 1px solid red;
+    height: 100%;
+}
+
+.good{
+    width: 250px;
+}
+
+.goods_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+/* 大图 */
+.goods_img{
+    width: 150px;
+    height: 200px;
+}
+
+.goods_img img{
+    width: 100%;
+    height: 100%;
+}
+/* 小图 */
+.goods_small_img{
+    margin-top: 5px;
+    margin-left: 25px;
+    width: 100%;
+    height: 40px;
+}
+
+.goods_small_img img{
+    width: 40px;
+    height: 40px;
+}
+
+.goods_title{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.goods_title a{
+    color: black;
+}
+
+.price{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.real_price{
+    margin-left: 10px;
+    font-size: 20px;
+    color: red;
+}
+
+.discount_price{
+    font-size: 16px;
+    color: rgb(165, 165, 165);
+}
+
+
+/* 隐藏信息 */
+.goods_other_info{
+    display: none;
+    width: 250px;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.first_mode{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.first_mode li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(165, 165, 165);
+    border-left: none;
+}
+
+.first_mode .goods_comment{
+    border-right: none;
+}
+
+.first_mode li span{
+    font-size: 14px;
+    color: rgb(50, 134, 245);
+}
+
+.first_mode li em{
+    font-size: 14px;
+}
+/* 店铺名字 */
+.goods_store{
+    width: 100%;
+    height: 30px;
+    background: rgba(165, 165, 165,0.2);
+    text-align: center;
+    line-height: 30px;
+}
+
+/* 加入购物车按钮 */
+.add_cart{
+    width: 100%;
+    height: 40px;
+    background: rgb(50, 134, 245);
+    text-align: center;
+    line-height: 40px;
+}
+
+.add_cart button{
+    background: rgb(50, 134, 245);
+    border: none;
+    color: white;
+    font-size: 20px;
+    height: 100%;
+}
+
+.goods_otherInfo_show{
+    display: flex;
+    /* height: 180px; */
+}
+
+.goods_otherInfo_hidden{
+    display: none;
+}
 
 
