@@ -1,0 +1,69 @@
+#hot{
+    padding: 10px 70px 0 70px;
+}
+
+.hot_recommend{
+    border: 1px solid rgb(170, 170, 170);
+    border-top-color: rgb(50, 134, 245);
+    border-top-width: 2px;
+}
+
+.hot_title{
+    padding: 10px;
+    background: rgba(218, 218, 218,0.2);
+}
+
+.hot_shop{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hot_shop li{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hot_shop div{
+    width: 100px;
+    height: 100px;
+}
+.hot_shop img{
+    width: 100%;
+    height: 100%;
+}
+
+.hot_shop li dl{
+    margin-left: 20px;
+    width: 150px;
+}
+
+.hot_shop li dl dt{
+    color: rgb(165, 165, 165);
+    font-size: 12px;
+    position:relative;
+    line-height:21px;
+    height:42px; /*height是line-height的整数倍，防止文字显示不全*/
+    overflow:hidden;
+}
+
+.hot_shop li em{
+    color: red;
+}
+
+.hot_shop li dd{
+    margin-top: 5px;
+}
+
+.buy_button{
+    margin-top: 5px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    color: white;
+    background: rgb(255, 89, 89);
+    border-radius: 2px;
+}
+
+
+

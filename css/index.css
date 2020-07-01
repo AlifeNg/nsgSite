@@ -1,0 +1,100 @@
+/* banner */
+.slide{
+    width: 100%;
+    height: 350px;
+}
+
+.product_mode{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+/* 楼层 */
+.product_mode .product_list{
+    width: 100%;
+    flex: 1;
+}
+
+.goods_header{
+    padding: 10px 70px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.goods_header_left{
+    font-size: 20px;
+    color: rgb(50, 134, 245);
+}
+
+.goods_header_right{
+    font-size: 18px;
+}
+
+.goods_navi ul{
+    padding: 0 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.goods_navi ul li{
+    margin-left: 20px;
+}
+
+.goods_navi ul li a{
+    color: black;
+}
+
+.goods_list{
+    padding: 0 50px;
+}
+
+.goods_list ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods_list ul li{
+    flex: 1;
+    margin:0 20px;
+}
+
+.goods_list ul li a{
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    color: black;
+    font-size: 12px;
+}
+
+.goods_list ul li img{
+    width: 100%;
+}
+
+.goods_list span{
+    font-size: 20px;
+    color: red;
+}
+
+.goods div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom{
+    padding: 0 70px;
+    display: flex;
+    justify-content: center;
+    background: rgb(218, 218, 218);
+}
+
+.goCart{
+    border: none;
+    border-radius: 5px;
+    background: rgb(255, 89, 89);
+    color: white;
+    width: 80px;
+}
