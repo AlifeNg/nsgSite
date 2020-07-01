@@ -96,14 +96,18 @@
 }
 
 .goods_list_content{
-    padding: 10px 0;
     margin: 0 70px;
-    border: 1px solid red;
     height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .good{
-    width: 250px;
+    margin-top: 10px;
+    border: 0.1px solid rgb(165, 165, 165);
+    /* border-right: none; */
+    width: 25%;
 }
 
 .goods_info{
@@ -127,9 +131,18 @@
     margin-left: 25px;
     width: 100%;
     height: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.goods_small_img li{
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
 }
 
 .goods_small_img img{
+    display: block;
     width: 40px;
     height: 40px;
 }
@@ -164,7 +177,7 @@
 /* 隐藏信息 */
 .goods_other_info{
     display: none;
-    width: 250px;
+    width: 100%;
     /* display: flex; */
     flex-direction: column;
     align-items: center;
@@ -223,7 +236,6 @@
 
 .goods_otherInfo_show{
     display: flex;
-    /* height: 180px; */
 }
 
 .goods_otherInfo_hidden{
