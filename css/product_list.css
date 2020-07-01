@@ -65,5 +65,28 @@
     border-radius: 2px;
 }
 
+.header_sort{
+    margin: 10px 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid rgb(165, 165, 165);
+}
+
+.header_sort ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.header_sort ul li{
+    margin-left: 10px;
+}
+
+.header_sort ul li a{
+    display: block;
+}
+
 
 
