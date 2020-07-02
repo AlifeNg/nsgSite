@@ -257,9 +257,9 @@ productDom.forEach(li=>{
     smallImgArr.forEach(e =>{
     banner_imgs.push(e.querySelector("img").src)  
     })
-    product.banner_imgs = banner_imgs
-    // let banner_imgsJson = JSON.stringify(banner_imgs)
-    // product.banner_imgs = banner_imgsJson
+    // product.banner_imgs = banner_imgs
+    let banner_imgsJson = JSON.stringify(banner_imgs)
+    product.banner_imgs = banner_imgsJson
     list_data.push(product)
     })
     JSON.stringify(list_data)
