@@ -1,12 +1,14 @@
 $(() => {
+
     $.ajax({
         type:"get",
         url:"../service/goodsList.php",
         dataType:"json",
     }).done(data => {
         data.forEach((item,idx) => {
+            let bannerImgs =  JSON.parse(item.banner_imgs)
             let bannerImg = []
-            item.banner_imgs.forEach(imgStr => {
+            bannerImgs.forEach(imgStr => {
                 bannerImg.push(`<li><img src="${imgStr}" alt=""></li>`)
             });
             let smallBannerHtml = bannerImg.join("");
