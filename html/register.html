@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/login.css">
     <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../js/regsiter.js"></script>
     <script src="../third_party/captcha.js"></script>
+    <script src="../js/regsiter.js"></script>
 </head>
 <body>
     <div class="header">
@@ -34,25 +34,12 @@
                 <input class="imageCode_input" type="text" maxlength="6" placeholder="请输入验证码" id="imageCode">
                 <canvas width="120" height="45" id="captcha"></canvas>
             </div>
-            <div class="login_button"><button>注册</button></div>
+            <div class="error_tips"><span>2222222</span></div>
+            <div class="login_button"><button id="registerBtn">注册</button></div>
         </div>
     </div>
     <div class="bottom footer">
         <img src="../img/nsgfoot_bz.png" alt="" width="1200" height="90">
     </div>
-    <script>
-        $(()=>{
-            let imgCodeTarget;
-        let captcha = new Captcha({ lineNum: 10, dotNum: 3, fontSize: 40, length: 4, content: "012345432424542" });
-
-        captcha.draw(document.querySelector('#captcha'), r => {
-        imgCodeTarget = r;
-        console.log(r, '验证码1');
-        /* 当用户点击图形变化验证码的时候需要重新校验 */
-        $("#imageCode").trigger("blur");
-    });
-        })
-
-    </script>
 </body>
 </html>
