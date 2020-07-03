@@ -25,6 +25,9 @@ $(()=>{
             dataType: "json",
             success: function(response) {
                 if (response.status == "success") {
+                    console.log(response);
+                    localStorage.username = username;
+                    localStorage.id = response.data.userId;
                     window.location.href = "../html/index.html";
                 } else {
                     alert(response.msg);

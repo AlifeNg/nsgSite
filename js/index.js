@@ -1,6 +1,21 @@
 $(() => {
     (new Slider(["../img/banner_1.jpg", "../img/banner_2.jpg"])).init();
 
+    let showText = localStorage.username ? localStorage.username + ",欢迎你！" : "请登录";
+    $(".login_btn > a").text(showText);
+
+    if (localStorage.username) {
+        $(".register_btn > a").text("注销")
+        $(".register_btn").click(()=>{
+            localStorage.clear();
+            window.location.href = "../html/index.html";
+        })
+    }else{
+        $(".register_btn").click(()=>{
+            window.location.href = "../html/register.html";
+        })
+    }
+    
     // 首页楼层
     $.ajax({
         type:"get",

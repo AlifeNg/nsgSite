@@ -26,7 +26,6 @@ $(()=>{
             // $(this).next().text("");
             // $(this).parents(".form-item").removeClass("form-group-error")
         } else {
-            console.log("---");
             alert(options[action].msg)
             return;
         }
@@ -61,7 +60,7 @@ $(()=>{
                 console.log(response);
                 if (response.status == "success") {
                     alert(response.msg);
-                    window.location.href = "..//html/index.html";
+                    window.location.href = "..//html/login.html";
                 } else {
                     alert(response.msg);
                 }
