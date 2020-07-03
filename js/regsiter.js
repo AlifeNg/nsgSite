@@ -20,21 +20,16 @@ $(()=>{
     $(".login_mode input").blur(function() {
         let action = this.id;
         let val = $.trim($(this).val());
-        console.log(options[action]);
         if (eval(options[action].reg)) {
             console.log("++++");
             // $(this).parents(".error_tips").text("qqqqqqqq");
             // $(this).next().text("");
             // $(this).parents(".form-item").removeClass("form-group-error")
         } else {
-            // $(this).next().text(options[action].msg);
-            // $(this).parents(".form-item").addClass("form-group-error")
-
-            console.log("----");
-            
+            console.log("---");
+            alert(options[action].msg)
+            return;
         }
-        console.log(options[action].msg);
-        $(this).parents(".error_tips").css("background-color: #2f97f0");
     });
 
 
@@ -46,24 +41,24 @@ $(()=>{
         imgCodeTarget = r;
         console.log(r, '验证码1');
         /* 当用户点击图形变化验证码的时候需要重新校验 */
-        $("#imageCode").trigger("blur");
+        // $("#imageCode").trigger("blur");
     });
 
     $("#registerBtn").click(function() {
         $("#username,#imageCode,#password").trigger("blur");
         /* 003-发送网络请求把注册相关的信息提交给服务器 */
         let data = {
-            username: $.trim($("#usernameID").val()),
+            username: $.trim($("#username").val()),
             password: $.trim($("#password").val()),
         }
 
         $.ajax({
-            data,
-            type: "get",
+            data: data,
+            type: "post",
             dataType: "json",
             url: "../service/register.php",
             success(response) {
-                // console.log(response);
+                console.log(response);
                 if (response.status == "success") {
                     alert(response.msg);
                     window.location.href = "..//html/index.html";
