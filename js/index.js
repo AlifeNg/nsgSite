@@ -69,7 +69,9 @@ $(() => {
             $(".product_mode").append(html)
         });
         $(".product_mode").trigger("create");
-        
-        
+    })
+
+    $(".car_button").click(()=>{
+        location.href = "../html/cartlist.html"
     })
 })

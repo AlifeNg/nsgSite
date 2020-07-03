@@ -65,4 +65,29 @@ $(() => {
         $(this).children().eq(1).removeClass('goods_otherInfo_show')
         $(this).children().eq(1).addClass('goods_otherInfo_hidden')
     })
+
+    // 添加购物车
+    $(".goods_list_content").on("click", ".add_cart", function() {
+        let user_id = localStorage.getItem("id") || "";
+        let user_name = localStorage.getItem("username") || "";
+        let good_id = $(this).parent().parent().attr("data-goodid");
+        let store_id = $(this).parent().parent().attr("data-storeid");
+        if (user_id && user_name) {
+            /* 发请求，执行添加到购物车 */
+            $.ajax({
+                url: "../service/addCart.php",
+                data: { user_id, good_id ,store_id}
+            }).done(data => {
+                alert(data)
+            })
+        } else {
+            /* 跳转去登录 */
+            location.href = "../html/login.html"
+        }
+    })
+    // 点击购物车
+    $(".car_button").click(()=>{
+        location.href = "../html/cartlist.html"
+    })
+
 })

@@ -17,20 +17,42 @@ $(()=>{
         }
     }
 
-    $(".login_mode input").blur(function() {
+    let trueUsername = true;
+    let truePassword = true;
+    let trueCanvans = true;
+    $("#username").blur(function() {
         let action = this.id;
         let val = $.trim($(this).val());
         if (eval(options[action].reg)) {
             console.log("++++");
-            // $(this).parents(".error_tips").text("qqqqqqqq");
-            // $(this).next().text("");
-            // $(this).parents(".form-item").removeClass("form-group-error")
+            trueUsername = true;
         } else {
             alert(options[action].msg)
-            return;
+            trueUsername = false;
         }
     });
 
+    $("#password").blur(function() {
+        let action = this.id;
+        let val = $.trim($(this).val());
+        if (eval(options[action].reg)) {
+            truePassword = true;
+        } else {
+            alert(options[action].msg)
+            truePassword = false;
+        }
+    });
+
+    $("#imageCode").blur(function() {
+        let action = this.id;
+        let val = $.trim($(this).val());
+        if (eval(options[action].reg)) {
+            trueCanvans = true;
+        } else {
+            alert(options[action].msg)
+            trueCanvans = false;
+        }
+    });
 
 
     let imgCodeTarget;
@@ -46,9 +68,11 @@ $(()=>{
     $("#registerBtn").click(function() {
         $("#username,#imageCode,#password").trigger("blur");
         /* 003-发送网络请求把注册相关的信息提交给服务器 */
-        let data = {
-            username: $.trim($("#username").val()),
-            password: $.trim($("#password").val()),
+        if(!trueUsername || !truePassword || !trueCanvans){
+            return;
+        }
+
+            username: $.trim($("#username").val()),            password: $.trim($("#password").val()),
         }
 
         $.ajax({

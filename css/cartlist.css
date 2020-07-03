@@ -1,0 +1,103 @@
+.navi .nav_right{
+    width: 100px;
+}
+
+.header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header .logo_gif{
+    margin-left: 25px;
+}
+
+.cartlist_title{
+    padding: 0 70px;
+}
+
+h2{
+    font: lighter 24px/30px arial, "microsoft yahei";
+    color: #555;
+}
+
+h3{
+    margin-top: -10px;
+    font: 12px/20px arial, "microsoft yahei";
+    color: #AAA;
+}
+
+h3{
+    margin-top: -10px;
+    font: 14px/20px arial, "microsoft yahei";
+    color: black;
+}
+
+/* ------------------------    头部    ------------------------*/
+.cart_mode{
+    padding: 0 70px;
+}
+
+.cart_hd{
+    background: #F9F9F9;
+    
+}
+
+.cart_hd ul{
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+}
+
+/* 商品信息 */
+.goodsbox{
+    /* width: 100%; */
+}
+
+.store{
+    background: #DAF0FE;
+}
+
+.stores_goods_list{
+    border: 1px solid #ccc;
+}
+
+.good{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.good_chk img{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
+
+.good_name a{
+    color: black;
+    display:block;
+    width: 200px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+.good_price{
+    width: 200px;
+    margin-left: 50px;
+}
+
+.num {
+    width: 100px;
+}
+
+.num input{
+    display: inline-block;
+    width: 20px;
+}
+
+.good_sum{
+    width: 200px;
+    text-align: center;
+
+}
