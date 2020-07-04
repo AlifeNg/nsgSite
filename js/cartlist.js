@@ -13,11 +13,9 @@ $(() => {
         let arr = [];
         data.forEach(item => {
             let result = arr.filter((ele) => ele.store == item.store);
-            console.log(1111,result)
             if (result.length == 0) {
                 arr.push({ store: item.store, goods: [] });
             }
-            console.log(2222,result)
             console.log(3333,arr);
         })
 
@@ -31,8 +29,14 @@ $(() => {
         })
 
         let html = "";
+        let sum = 0;
         arr.forEach(data =>{
             let listHtml = data.goods.map(item=>{
+                let salePrice = item.sale_price.substring(1,item.sale_price.length);
+                let storeSum = item.num * salePrice;
+                console.log("storeSum",storeSum);
+                sum += storeSum;
+                console.log(sum); 
                 return ` <ul class="good" data-goodid=${item.goods_id}>
                 <li class="good_chk">
                     <input type="checkbox" id="good_check" class="one_check">
@@ -50,7 +54,7 @@ $(() => {
                     <button>+</button>
                 </li>
                 <li class="good_sum">
-                    <span>${item.num}</span>
+                    <span>￥${storeSum}</span>
                 </li>
                 <li>
                     <button>收藏</button>
@@ -69,6 +73,7 @@ $(() => {
         })
 
         $(html).insertAfter(".cart_hd");
+        $(".sum_price > span").text(`￥${sum}`)
 
     })
 
