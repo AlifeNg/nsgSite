@@ -82,7 +82,7 @@ $(() => {
     <div class="store">
         <h5>店铺：潮男搭配师</h5>
     </div>
-
+            11111
             <ul class="good">
                 <li class="good_chk">
                     <input type="checkbox" id="good_check" class="one_check">
